@@ -1,3 +1,211 @@
+/* fonte */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* root */
+
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line:  hsl(215, 32%, 27%);
+    --soft-blue:hsl(215, 51%, 70%);
+    --cyano: hsl(178, 100%, 50%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
 body {
-    padding: auto auto;
+    background: var(--main-bg);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* card */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45vh;
+    background: var(--card-bg);
+    padding: 18px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 15px 15px 70px #000;
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card img:hover {
+    cursor: pointer;
+    color: var(--cyano);
+    z-index: 2;
+}
+/* container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 30px auto;
+}
+
+.container h2 {
+    color: #FFF;
+
+}
+
+.container h2:hover {
+    cursor: pointer;
+    color: var(--cyano);
+    transition: 0.5s;
+}
+
+.container p {
+    font-size: 0.9em;
+    letter-spacing: 0.02em;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+/* details */
+
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.ethereum img{
+    width: 8px;
+}
+
+.counter img {
+    width: 17px;
+}
+
+.ethereum, .counter {
+    display: flex;
+    gap: 8px;
+}
+
+.details #ETH, .details #days-left {
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.details #ETH{
+    color: var(--cyano);
+}
+
+.details #days-left {
+    color: var(--soft-blue);
+}
+
+/* divisoria */
+
+.divisoria {
+    border-bottom: 1px solid var(--line);
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* profile */
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    margin-bottom: 12px;
+    color: #FFF;
+}
+
+.profile img {
+    width: 10%;
+    border: 1px solid white;
+    border-radius: 64px;
+}
+
+.profile span {
+    color: var(--soft-blue);
+}
+
+.profile span:hover {
+    cursor: pointer;
+    color: var(--cyano);
+    transition: 0.5s;
+}
+
+/* Responsividade */
+
+@media only screen  and (min-width: 721px) and (max-width: 1120px) {
+    section {
+        width: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .card {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .card img#primeira-imagem{
+        width: 100%;
+    }
+
+}
+
+@media only screen  and (max-width: 720px){
+    section {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .card{
+        width: 50vh;
+        margin: 0 auto;
+
+    }
+
+    .container h2 {
+        font-size: 1.6em;
+    }
+
+    .container p {
+        font-size: 1em ;
+    }
 }
